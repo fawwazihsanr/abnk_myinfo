@@ -18,7 +18,7 @@ This project demonstrates the integration of the Singpass MyInfo API using Djang
 1. **Create a virtual environment and activate it**
    ```sh
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate
    ```
 
 2. **Install dependencies**
@@ -48,6 +48,7 @@ This project demonstrates the integration of the Singpass MyInfo API using Djang
 ## Usage
 
 ### Endpoints
+Additionally, you must include the `sessionid` cookie in the request.
 - **GET `/api/myinfo/login/`**: Returns the Singpass login URL for user authentication.
 - **POST `/api/myinfo/data/`**: Retrieves user data from MyInfo after successful authentication. This endpoint requires a request body containing `{"auth_code": "your_auth_code"}`. The `auth_code` is provided by MyInfo after user authentication and is used to retrieve user details.
 
